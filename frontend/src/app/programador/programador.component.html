@@ -2,7 +2,95 @@
     <div class="container d-flex p-3 mx-auto flex-column h-100">
         <app-navbar></app-navbar>
         <main class="mt-5 px-5 h-100">
-            <p>programador-works!</p>
+            <h1 class="my-5">
+                Cadastrar Programador
+            </h1>
+
+            <section class="my-5">
+                <form>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Nome">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="sexo">Sexo</label>
+                            <select id="sexo" class="form-control">
+                                <option selected disabled>Escolha...</option>
+                                <option>M</option>
+                                <option>F</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="dataNascimento">Data de Nascimento</label>
+                            <input type="text" class="form-control" id="dataNascimento" placeholder="ex: 12/12/1989">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="idade">Idade</label>
+                            <input type="number" class="form-control" id="idade" placeholder="ex: 32">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="form-group col-md-8">
+                            <label for="nome">Endereço</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Nome">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="nivel">Nível</label>
+                            <select id="nivel" class="form-control">
+                                <option selected disabled>Escolha...</option>
+                                <option>Júnior</option>
+                                <option>Pleno</option>
+                                <option>Senior</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="form-group col-md-12">
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+            </section>
+
+            <section class="my-5">
+                <table class="table text-white">
+                    <thead>
+                        <tr>
+                            <th width="50">ID</th>
+                            <th>Nome</th>
+                            <th>Sexo</th>
+                            <th>Data de Nascimento</th>
+                            <th>Idade</th>
+                            <th>Hobby</th>
+                            <th>Nível</th>
+                            <th width="150" class="text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Carlos Pessin Junior</td>
+                            <td>M</td>
+                            <td>12/12/1989</td>
+                            <td>32</td>
+                            <td>Tocar violão e produzir músicas</td>
+                            <td>Júnior</td>
+                            <td>
+                                <a href="" class="btn btn-outline-warning btn-sm px-3 mx-1" data-toggle="tooltip"
+                                    data-placement="left" title="Visualizar"><i class="fa fa-edit"></i></a>
+                                <a href="" class="btn btn-outline-danger btn-sm px-3 mx-1" data-toggle="tooltip"
+                                    data-placement="left" title="Editar cadastro"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
         <app-footer></app-footer>
     </div>

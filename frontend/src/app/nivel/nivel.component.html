@@ -2,7 +2,45 @@
     <div class="container d-flex p-3 mx-auto flex-column h-100">
         <app-navbar></app-navbar>
         <main class="mt-5 px-5 h-100">
-            <p>nivel-works!</p>
+            <h1 class="my-5">
+                Cadastrar Nível
+            </h1>
+
+            <section class="my-5">
+                <form class="row">
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="Nível" aria-label="Nível">
+                    </div>
+
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="my-5">
+                <table class="table text-white">
+                    <thead>
+                        <tr>
+                            <th width="50">ID</th>
+                            <th>Nível</th>
+                            <th width="150" class="text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Júnior</td>
+                            <td>
+                                <a href="" class="btn btn-outline-warning btn-sm px-3 mx-1" data-toggle="tooltip"
+                                    data-placement="left" title="Visualizar"><i class="fa fa-edit"></i></a>
+                                <a href="" class="btn btn-outline-danger btn-sm px-3 mx-1" data-toggle="tooltip"
+                                    data-placement="left" title="Editar cadastro"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
         <app-footer></app-footer>
     </div>
