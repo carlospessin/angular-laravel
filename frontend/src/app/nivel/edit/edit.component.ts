@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
-import { Nivel } from '../nivel';
-import { NivelService } from '../nivel.service';
+import { Nivel } from '../../entities/nivel';
+import { NivelService } from '../../services/nivel.service';
 
 
 @Component({

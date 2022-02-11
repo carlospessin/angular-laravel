@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { NivelService } from '../nivel.service';
+import { NivelService } from '../../services/nivel.service';
 
 @Component({
   selector: 'app-create',
@@ -14,7 +13,7 @@ export class CreateComponent implements OnInit {
   form!: FormGroup;
 
   constructor(
-    public personService: NivelService,
+    public nivelService: NivelService,
     private router: Router
   ) { }
 
@@ -33,7 +32,7 @@ export class CreateComponent implements OnInit {
 
   submit(){
     console.log(this.form.value);
-    this.personService.create(this.form.value).subscribe(res => {
+    this.nivelService.create(this.form.value).subscribe(res => {
          console.log('Nível criado com sucesso!');
          this.router.navigateByUrl('nivel');
     })

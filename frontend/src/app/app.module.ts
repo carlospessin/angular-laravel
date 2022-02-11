@@ -1,3 +1,5 @@
+import { ProgramadorModule } from './programador/programador.module';
+import { ProgramadorRoutingModule } from './programador/programador-routing.module';
 import { NivelModule } from './nivel/nivel.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,8 +29,10 @@ import { NivelRoutingModule } from './nivel/nivel-routing.module';
     BrowserModule,
     AppRoutingModule,
     NivelModule,
+    ProgramadorModule,
     HttpClientModule,
-    NivelRoutingModule
+    NivelRoutingModule,
+    ProgramadorRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

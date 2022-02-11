@@ -17,6 +17,7 @@ class CreateNivelTable extends Migration
             $table->id();
             $table->string('nivel');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

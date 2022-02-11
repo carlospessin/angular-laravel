@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Nivel } from './nivel';
-import { NivelService } from './nivel.service';
+import { Nivel } from '../entities/nivel';
+import { NivelService } from '../services/nivel.service';
 
 @Component({
   selector: 'app-nivel',

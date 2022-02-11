@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\NivelController;
+use App\Http\Controllers\API\ProgramadorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,12 @@ Route::prefix('nivel')->group(function () {
     Route::delete('/{id}',[ NivelController::class, 'delete']);
     Route::get('/{id}',[ NivelController::class, 'get']);
     Route::put('/{id}',[ NivelController::class, 'update']);
+});
+
+Route::prefix('programador')->group(function () {
+    Route::get('/',[ ProgramadorController::class, 'getAll']);
+    Route::post('/',[ ProgramadorController::class, 'create']);
+    Route::delete('/{id}',[ ProgramadorController::class, 'delete']);
+    Route::get('/{id}',[ ProgramadorController::class, 'get']);
+    Route::put('/{id}',[ ProgramadorController::class, 'update']);
 });
