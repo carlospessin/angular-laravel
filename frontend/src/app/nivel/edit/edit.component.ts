@@ -29,8 +29,7 @@ export class EditComponent implements OnInit {
     });
 
     this.form = new FormGroup({
-      name:  new FormControl('', [ Validators.required, Validators.pattern('^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ \-\']+') ]),
-      phone: new FormControl('', [ Validators.required, Validators.pattern("^[0-9]*$") ])
+      nivel:  new FormControl('', [ Validators.required, Validators.pattern('^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ \-\']+') ]),
     });
 
   }
@@ -43,7 +42,7 @@ export class EditComponent implements OnInit {
     console.log(this.form.value);
     this.nivelService.update(this.id, this.form.value).subscribe(res => {
          console.log('Nível atualizado com sucesso!');
-         this.router.navigateByUrl('nivel/index');
+         this.router.navigateByUrl('nivel');
     })
   }
 

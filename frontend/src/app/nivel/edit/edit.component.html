@@ -2,24 +2,31 @@
   
     <div class="d-flex justify-content-between">
       <h4>Editar Nível</h4>
-      <a href="#" routerLink="/nivel/index" class="btn btn-primaryt">Voltar</a>
+      <a href="#" routerLink="/nivel" class="btn btn-secondary">Voltar</a>
     </div>
 
-    <hr>
+    <hr />
 
-    <form [formGroup]="form" (ngSubmit)="submit()">
-        <div class="form-group row">
-            <div class="col-md-6 ">
-              <label for="title">Nivel:</label>
-              <input
-                formControlNivel="nivel"
+    <div class="d-flex justify-content-center">
+        <form [formGroup]="form" (ngSubmit)="submit()" class="row">
+            <div class="col-sm-11">
+                <input 
+                formControlName="nivel" 
                 [(ngModel)]="nivel.nivel"
-                id="nivel"
-                type="text"
-                class="form-control">
+                id="nivel" 
+                type="text" 
+                class="form-control" 
+                aria-label="Nível">
             </div>
-        </div>
 
-        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Atualizar</button>
-    </form>
+            <div class="col-sm-1">
+                <button type="submit" class="btn btn-primary">Atualizar</button>
+            </div>
+
+            <div *ngIf="f['nivel'].touched && f['nivel'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nivel'].errors">*nivel is required.</div>
+            </div>
+        </form>
+    </div>
+
 </div>

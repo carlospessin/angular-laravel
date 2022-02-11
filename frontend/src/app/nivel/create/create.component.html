@@ -11,12 +11,20 @@
         <div class="d-flex justify-content-center">
             <form [formGroup]="form" (ngSubmit)="submit()" class="row">
                 <div class="col-sm-11">
-                    <input formControlNivel="nivel" id="nivel" type="text" class="form-control" placeholder="Nível"
-                        aria-label="Nível">
+                    <input 
+                    formControlName="nivel" 
+                    id="nivel" 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Nível"
+                    aria-label="Nível">
                 </div>
 
                 <div class="col-sm-1">
-                    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+                <div *ngIf="f['nivel'].touched && f['nivel'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['nivel'].errors">*nivel is required.</div>
                 </div>
             </form>
         </div>
