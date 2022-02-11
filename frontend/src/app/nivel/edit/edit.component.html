@@ -8,8 +8,6 @@
     <hr>
 
     <form [formGroup]="form" (ngSubmit)="submit()">
-
-
         <div class="form-group row">
             <div class="col-md-6 ">
               <label for="title">Nivel:</label>
@@ -19,10 +17,6 @@
                 id="nivel"
                 type="text"
                 class="form-control">
-              <div *ngIf="['nivel']" class="alert alert-danger">
-                  <div *ngIf="['pattern']">*Este campo é obrigatório.</div>
-                  <div *ngIf="['pattern']">*Este campo deve conter apenas letras.</div>
-              </div>
             </div>
         </div>
 
