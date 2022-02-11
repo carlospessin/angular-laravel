@@ -1,3 +1,4 @@
+import { NivelModule } from './nivel/nivel.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,8 @@ import { NivelComponent } from './nivel/nivel.component';
 import { ComponentsComponent } from './components/components.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NivelRoutingModule } from './nivel/nivel-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NivelModule,
+    HttpClientModule,
+    NivelRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

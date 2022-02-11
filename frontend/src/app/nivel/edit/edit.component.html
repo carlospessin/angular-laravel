@@ -1,0 +1,31 @@
+<div class="container">
+  
+    <div class="d-flex justify-content-between">
+      <h4>Editar Nível</h4>
+      <a href="#" routerLink="/nivel/index" class="btn btn-primaryt">Voltar</a>
+    </div>
+
+    <hr>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="title">Nivel:</label>
+              <input
+                formControlNivel="nivel"
+                [(ngModel)]="nivel.nivel"
+                id="nivel"
+                type="text"
+                class="form-control">
+              <div *ngIf="['nivel']" class="alert alert-danger">
+                  <div *ngIf="['pattern']">*Este campo é obrigatório.</div>
+                  <div *ngIf="['pattern']">*Este campo deve conter apenas letras.</div>
+              </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Atualizar</button>
+    </form>
+</div>
