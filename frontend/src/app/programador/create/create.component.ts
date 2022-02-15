@@ -42,7 +42,7 @@ export class CreateComponent implements OnInit {
         nome:  new FormControl(''),
         endereco:  new FormControl(''),
         sexo:  new FormControl(''),
-        data_nascimento:  new FormControl(''),
+        data_nascimento:  new FormControl('', null),
         idade:  new FormControl(''),
         hobby:  new FormControl(''),
         nivel_id:  new FormControl(''),
@@ -54,6 +54,7 @@ export class CreateComponent implements OnInit {
     }
   
     submit(){
+        console.log(this.form.value);
       this.programadorService.create(this.form.value).subscribe(res => {
            console.log('Cadastrado com sucesso!');
            this.router.navigateByUrl('programador');

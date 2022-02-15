@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateProgramadorTable extends Migration
 {
@@ -15,13 +16,13 @@ class CreateProgramadorTable extends Migration
     {
         Schema::create('programador', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('endereco');
-            $table->char('sexo')->comment('Masculino; Feminino; Outros');
-            $table->date('data_nascimento');
-            $table->integer('idade');
-            $table->string('hobby');
-            $table->unsignedBigInteger('nivel_id');
+            $table->string('nome')->nullable();
+            $table->string('endereco')->nullable();
+            $table->char('sexo')->comment('Masculino; Feminino; Outros')->nullable();
+            $table->date('data_nascimento')->nullable();
+            $table->integer('idade')->nullable();
+            $table->string('hobby')->nullable();
+            $table->unsignedBigInteger('nivel_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

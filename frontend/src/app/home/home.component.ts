@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
     constructor(public programadorService: ProgramadorService) { }
 
     ngOnInit(): void {
-        console.log(this.programadores);
       this.programadorService.getAll().subscribe((data: Programador[])=>{
         this.programadores = data;
       })
