@@ -42,8 +42,8 @@ export class ProgramadorService {
      )
    }
   
-   update(id: any, nivel: string): Observable<Programador> {
-     return this.httpClient.put<Programador>(this.apiURL + id, JSON.stringify(nivel), this.httpOptions)
+   update(id: any, data: string): Observable<Programador> {
+     return this.httpClient.put<Programador>(this.apiURL + id, JSON.stringify(data), this.httpOptions)
      .pipe(
        catchError(this.errorHandler)
      )

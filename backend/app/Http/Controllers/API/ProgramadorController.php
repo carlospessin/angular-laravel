@@ -9,12 +9,13 @@ use Illuminate\Http\Request;
 class ProgramadorController extends Controller
 {
     public function getAll(){
-        $data = Programador::get();
+        $data = Programador::with('nivel')->get();
         return response()->json($data, 200);
       }
   
       public function create(Request $request){
         $data['nome'] = $request['nome'];
+        $data['endereco'] = $request['endereco'];
         $data['sexo'] = $request['sexo'];
         $data['data_nascimento'] = $request['data_nascimento'];
         $data['idade'] = $request['idade'];
@@ -41,7 +42,13 @@ class ProgramadorController extends Controller
       }
   
       public function update(Request $request,$id){
-        $data['programador'] = $request['programador'];
+        $data['nome'] = $request['nome'];
+        $data['endereco'] = $request['endereco'];
+        $data['sexo'] = $request['sexo'];
+        $data['data_nascimento'] = $request['data_nascimento'];
+        $data['idade'] = $request['idade'];
+        $data['hobby'] = $request['hobby'];
+        $data['nivel_id'] = $request['nivel_id'];
         Programador::find($id)->update($data);
         return response()->json([
             'message' => "Atualizado com sucesso",
@@ -49,3 +56,5 @@ class ProgramadorController extends Controller
         ], 200);
       }
 }
+
+

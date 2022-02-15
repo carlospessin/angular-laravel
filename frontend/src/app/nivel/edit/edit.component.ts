@@ -39,7 +39,6 @@ export class EditComponent implements OnInit {
   }
 
   submit(){
-    console.log(this.form.value);
     this.nivelService.update(this.id, this.form.value).subscribe(res => {
          console.log('Nível atualizado com sucesso!');
          this.router.navigateByUrl('nivel');

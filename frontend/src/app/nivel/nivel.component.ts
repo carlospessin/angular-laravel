@@ -16,7 +16,6 @@ export class NivelComponent implements OnInit {
   ngOnInit(): void {
     this.nivelService.getAll().subscribe((data: Nivel[])=>{
       this.niveis = data;
-      console.log(this.niveis);
     })
   }
 

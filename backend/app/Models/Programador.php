@@ -15,6 +15,7 @@ class Programador extends Model
 
     protected $fillable = [
         'nome',
+        'endereco',
         'sexo',
         'data_nascimento',
         'idade',

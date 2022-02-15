@@ -4,6 +4,7 @@ import { Nivel } from './nivel';
 export interface Programador {
     id: number;
     nome: string;
+    endereco: string;
     sexo: Sexo;
     data_nascimento: Date;
     idade: number;

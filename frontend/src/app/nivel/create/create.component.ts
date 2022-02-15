@@ -31,7 +31,6 @@ export class CreateComponent implements OnInit {
 
 
   submit(){
-    console.log(this.form.value);
     this.nivelService.create(this.form.value).subscribe(res => {
          console.log('Nível criado com sucesso!');
          this.router.navigateByUrl('nivel');

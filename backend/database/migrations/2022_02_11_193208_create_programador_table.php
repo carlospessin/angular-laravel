@@ -16,7 +16,8 @@ class CreateProgramadorTable extends Migration
         Schema::create('programador', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->char('sexo', 1)->comment('M - masculino; F - Feminino; O - Outros');
+            $table->string('endereco');
+            $table->char('sexo')->comment('Masculino; Feminino; Outros');
             $table->date('data_nascimento');
             $table->integer('idade');
             $table->string('hobby');

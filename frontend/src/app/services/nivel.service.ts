@@ -18,6 +18,7 @@ export class NivelService {
        'Content-Type': 'application/json'
      })
   }
+    http: any;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -27,6 +28,7 @@ export class NivelService {
      catchError(this.errorHandler)
    )
  }
+
 
  create(nivel: string): Observable<Nivel> {
    return this.httpClient.post<Nivel>(this.apiURL, JSON.stringify(nivel), this.httpOptions)

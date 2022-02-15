@@ -16,7 +16,7 @@
                             aria-label="Nome">
                     </div>
                     <div class="form-group col-md-4">
-                        <input formControlName="data_nascimento" id="data" type="date" class="form-control"
+                        <input formControlName="data_nascimento" id="data" type="date" class="form-control" 
                             placeholder="Data de Nascimento" aria-label="Data de Nascimento">
                     </div>
                 </div>
@@ -24,10 +24,8 @@
                 <div class="mt-2 row">
                     <div class="form-group col-md-2">
                         <select formControlName="sexo" id="sexo" class="form-control">
-                            <option selected disabled>Escolha...</option>
-                            <option>M</option>
-                            <option>F</option>
-                            <option>Outro</option>
+                            <option [ngValue]="null" selected disabled>Escolha...</option>
+                            <option *ngFor="let sexo of sexos" [ngValue]="sexo.name">{{sexo.name}}</option>
                         </select>
                     </div>
                     <div class="form-group col-md-2">
@@ -41,11 +39,9 @@
                 </div>
                 <div class="mt-2 row">
                     <div class="form-group col-md-4">
-                        <select formControlName="nivel" id="nivel" class="form-control">
-                            <option selected disabled>Escolha...</option>
-                            <option>Júnior</option>
-                            <option>Pleno</option>
-                            <option>Senior</option>
+                        <select formControlName="nivel_id" id="nivel_id" class="form-control">
+                            <option [ngValue]="null" selected disabled>Escolha...</option>
+                            <option *ngFor="let nivel of nivelList" [ngValue]="nivel.id">{{nivel.nivel}}</option>
                         </select>
                     </div>
                     <div class="form-group col-md-8">

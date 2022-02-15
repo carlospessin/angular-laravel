@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Programador } from '../entities/programador';
+import { ProgramadorService } from '../services/programador.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+    programadores: Programador[] = [];
+
+    constructor(public programadorService: ProgramadorService) { }
+
+    ngOnInit(): void {
+        console.log(this.programadores);
+      this.programadorService.getAll().subscribe((data: Programador[])=>{
+        this.programadores = data;
+      })
+    }
 
 }

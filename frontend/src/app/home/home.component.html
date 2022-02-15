@@ -16,20 +16,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Júnior</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Otto</td>
-                            <td>Pleno</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry the Bird</td>
-                            <td>Senior</td>
+                        <tr *ngFor="let programador of programadores">
+                            <th>{{ programador.id }}</th>
+                            <td>{{ programador.nome }}</td>
+                            <td>{{ programador.nivel.nivel }}</td>
                         </tr>
                     </tbody>
                 </table>
